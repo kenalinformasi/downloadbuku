@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Shop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    .main-content {
+      display: flex;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    aside {
+      width: 25%;
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    main {
+      width: 75%;
+    }
+
+    .slider {
+      width: 100%;
+      height: 250px;
+      background: url('https://via.placeholder.com/800x250') center/cover no-repeat;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .section h2 {
+      margin-bottom: 15px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 15px;
+    }
+
+    .product-card {
+      background: white;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .product-card img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .main-content {
+        flex-direction: column;
+      }
+
+      aside, main {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Book Shop</div>
+    <nav>
+      <a href="#hot">Hot Deals</a>
+      <a href="#best">Best Seller</a>
+      <a href="#new">New Arrival</a>
+      <a href="#featured">Featured</a>
+    </nav>
+  </header>
+
+  <div class="main-content">
+    <aside>
+      <h3>Kategori</h3>
+      <ul>
+        <li>Novel</li>
+        <li>Komik</li>
+        <li>Sains</li>
+        <li>Bisnis</li>
+        <li>Sejarah</li>
+      </ul>
+      <hr>
+      <h3>Testimoni</h3>
+      <p><strong>John Doe:</strong><br>"Pelayanan cepat dan buku berkualitas!"</p>
+    </aside>
+
+    <main>
+      <div class="slider"></div>
+
+      <div class="section" id="hot">
+        <h2>Hot Deals</h2>
+        <div class="products">
+          <div class="product-card">
+            <img src="https://via.placeholder.com/150" alt="Buku 1">
+            <p>Buku Diskon</p>
+          </div>
+          <div class="product-card">
+            <img src="https://via.placeholder.com/150" alt="Buku 2">
+            <p>Best Price Book</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section" id="best">
+        <h2>Best Seller</h2>
+        <div class="products">
+          <div class="product-card">
+            <img src="https://via.placeholder.com/150" alt="Buku Bestseller">
+            <p>Judul Populer</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section" id="new">
+        <h2>New Arrival</h2>
+        <div class="products">
+          <div class="product-card">
+            <img src="https://via.placeholder.com/150" alt="Buku Baru">
+            <p>Terbitan Baru</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section" id="featured">
+        <h2>Featured Books</h2>
+        <div class="products">
+          <div class="product-card">
+            <img src="https://via.placeholder.com/150" alt="Buku Pilihan">
+            <p>Buku Unggulan</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    &copy; 2025 Book Shop. All rights reserved
